@@ -10,7 +10,7 @@ import paquete001.Persona;
  *
  * @author reroes
  */
-public class PagoLuzElectrica {
+public class PagoLuzElectrica extends Pagos{
 
     public double calcularPago() {
         double pago = 0;
