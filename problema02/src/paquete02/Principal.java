@@ -5,8 +5,15 @@
  */
 package paquete02;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
+
+import paquete01.ListaMarcasTelevisores;
 import paquete01.Televisor;
+import paquete01.TelevisorMasCaro;
+import paquete01.TotalPrecioTvs;
+
+import javax.sound.midi.spi.SoundbankReader;
 
 /**
  *
@@ -33,7 +40,12 @@ public class Principal {
         tvs.add(t2);
         tvs.add(t3);
         System.out.println("-----------------");
-        System.out.printf("%.2f\n", t1.totalPrecioTvs(tvs));
+        System.out.println("PRECIO TOTAL DE LOS TELEVISORES ===============");
+        System.out.printf("%.2f\n", ((new TotalPrecioTvs()).totalPrecioTvs(tvs)));
+        System.out.println("TELEVISOR MAS CARO ===============");
+        System.out.printf("%.2f\n", ((new TelevisorMasCaro()).televisorMasCaro(tvs)));
+        System.out.println("LISTA DE LOS TELEVISORES ===============");
+        System.out.printf("%s\n", ((new ListaMarcasTelevisores()).listaMarcasVendidas(tvs)));
         // System.out.printf("%s\n", t1.listaMarcasVendidas(tvs));
 
     }
