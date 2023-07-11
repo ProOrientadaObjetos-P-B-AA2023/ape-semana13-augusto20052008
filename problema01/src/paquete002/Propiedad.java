@@ -9,5 +9,23 @@ package paquete002;
  * @author reroes
  */
 public class Propiedad {
-    public double costoPropiedad;
+    private double costoPropiedad;
+    public Propiedad() {
+    }
+    public Propiedad(double costoPropiedad) {
+        this.costoPropiedad = costoPropiedad;
+    }
+    public void setCostoPropiedad(double costoPropiedad) {
+        this.costoPropiedad = costoPropiedad;
+    }
+    public double getCostoPropiedad() {
+        return costoPropiedad;
+    }
+
+    @Override
+    public String toString() {
+        return "Propiedad{" +
+                "costoPropiedad=" + costoPropiedad +
+                '}';
+    }
 }
