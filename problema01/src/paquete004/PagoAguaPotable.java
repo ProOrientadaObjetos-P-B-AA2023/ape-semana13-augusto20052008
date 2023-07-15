@@ -69,10 +69,10 @@ public class PagoAguaPotable extends Pagos{
     @Override
     public String toString() {
         return "PagoAguaPotable{" +
-                "tipo='" + tipo + '\'' +
-                ", tarifaFija=" + tarifaFija +
-                ", metrosCubicosConsumo=" + metrosCubicosConsumo +
-                ", costoConsumoCubicos=" + costoConsumoCubicos +
-                "} " + super.toString();
+                "\ntipo='" + tipo + '\'' +
+                "\n tarifaFija=" + tarifaFija +
+                "\n metrosCubicosConsumo=" + metrosCubicosConsumo +
+                "\n costoConsumoCubicos=" + costoConsumoCubicos +
+                "}\n" + super.toString();
     }
 }

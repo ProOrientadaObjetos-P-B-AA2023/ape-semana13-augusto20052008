@@ -24,8 +24,8 @@ public class Propiedad {
 
     @Override
     public String toString() {
-        return "Propiedad{" +
+        return "\nPropiedad{" +
                 "costoPropiedad=" + costoPropiedad +
-                '}';
+                "}\n";
     }
 }

@@ -70,13 +70,29 @@ public class BilleteraPagos {
                 this.getGastoPagos());
     }*/
 
-    @Override
+/*    @Override
     public String toString() {
         return "BilleteraPagos{" +
                 "persona=" + persona +
                 ", gastoPagos=" + gastoPagos +
                 ", listaPagos=\n" + listaPagos +
                 '}';
+    }*/
+
+    @Override
+    public String toString() {
+        return String.format("""
+                      ======================== REPORTE ========================
+                      -Cliente: %s %s
+                      -Cédula: %s
+                      ─────────────────────────────────────────────────────────
+                      Lista Pagos
+                      %s
+                      ─────────────────────────────────────────────────────────
+                      %s
+                """,persona.getNombre(),persona.getApellido()
+                ,persona.getCedula(),getListaPagos().toString(),getGastoPagos().toString());
+
     }
 }
 

@@ -29,9 +29,9 @@ public abstract class Pagos {
 
     @Override
     public String toString() {
-        return "Pagos{" +
+        return "\nPagos\n" +
                 "mes='" + mes + '\'' +
                 ", pago=" + pago +
-                '}';
+                "}\n";
     }
 }

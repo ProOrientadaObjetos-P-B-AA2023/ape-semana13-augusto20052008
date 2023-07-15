@@ -45,9 +45,9 @@ public class PagoPredial extends Pagos {
 
     @Override
     public String toString() {
-        return "PagoPredial{" +
-                "propiedad=" + propiedad +
-                ", porcentaje=" + porcentaje +
-                "} " + super.toString();
+        return "\nPagoPredial{" +
+                "\npropiedad=" + propiedad +
+                "\nporcentaje=" + porcentaje +
+                "} \n" + super.toString();
     }
 }

@@ -35,12 +35,12 @@ public class Principal {
         //Inicio del Programa/
                 bandera = true;
 
-        System.out.println("*-------------- BILLETERA PAGOS --------------*");
+        System.out.println("=================== BILLETERA PAGOS ===================");
         System.out.println("Bienvenido estimad@ cliente.");
         System.out.println();
 
 
-        System.out.println("*-------------- REGISTRO --------------*");
+        System.out.println("=================== REGISTRO ===================");
         System.out.print("-Ingrese su nombre: ");
         cliente.setNombre(entrada.nextLine());
         System.out.print("-Ingrese su apellido: ");
@@ -57,14 +57,17 @@ public class Principal {
 
         do {
             System.out.println();
-            System.out.println("*---------- MENU PAGOS ----------*");
-            System.out.println("1) Agua Potable");
-            System.out.println("2) Luz Eléctrica");
-            System.out.println("3) Pago Predial");
-            System.out.println("4) Teléfono Convencional");
-            System.out.println("5) Reporte");
-            System.out.println("6) Salir");
-            System.out.print("-Ingrese una opcion: ");
+            System.out.println("┌──────────────────────────────────────┐");
+            System.out.println("│              MENU PAGOS              │");
+            System.out.println("├──────────────────────────────────────┤");
+            System.out.println("│ 1) Agua Potable                      │");
+            System.out.println("│ 2) Luz Eléctrica                     │");
+            System.out.println("│ 3) Pago Predial                      │");
+            System.out.println("│ 4) Teléfono Convencional             │");
+            System.out.println("│ 5) Reporte                           │");
+            System.out.println("│ 6) Salir                             │");
+            System.out.println("└──────────────────────────────────────┘");
+            System.out.print(" ▒ Ingrese una opcion: ");
             opcion_usuario = entrada.nextInt();
             entrada.nextLine();
 
@@ -72,16 +75,16 @@ public class Principal {
                 case 1 -> {
                     PagoAguaPotable pagoAguaPotable1 = new PagoAguaPotable();
 
-                    System.out.println("\n=================== AGUA POTABLE ===================");
-                    System.out.println("Ingrese el mes: ");
+                    System.out.println("\n=================­== AGUA POTABLE ===================");
+                    System.out.println(" ▒ Ingrese el mes: ");
                         pagoAguaPotable1.setMes(entrada.nextLine());
-                    System.out.println("Ingrese el tipo (comercial o casa) ");
+                    System.out.println(" ▒ Ingrese el tipo (comercial o casa) ");
                         pagoAguaPotable1.setTipo(entrada.nextLine());
-                    System.out.println("Ingrese la Tarifa Fija");
+                    System.out.println(" ▒ Ingrese la Tarifa Fija");
                         pagoAguaPotable1.setTarifaFija(entrada.nextDouble());
-                    System.out.println("Ingrese la Metros Cubicos Conumidos");
+                    System.out.println(" ▒ Ingrese la Metros Cubicos Conumidos");
                         pagoAguaPotable1.setMetrosCubicosConsumo(entrada.nextDouble());
-                    System.out.println("Ingrese el Costo de Consumo Cubico");
+                    System.out.println(" ▒ Ingrese el Costo de Consumo Cubico");
                         pagoAguaPotable1.setCostoConsumoCubicos(entrada.nextDouble());
                     pagoAguaPotable1.calcularPago();
                     listaPagos.add(pagoAguaPotable1);
@@ -89,13 +92,13 @@ public class Principal {
                 case 2 -> {
                     PagoLuzElectrica pagoLuzElectrica1 = new PagoLuzElectrica();
                     System.out.println("\n=================== Luz Electrica ===================");
-                    System.out.println("Ingrese el mes: ");
+                    System.out.println(" ▒ Ingrese el mes: ");
                         pagoLuzElectrica1.setMes(entrada.nextLine());
-                    System.out.println("Ingrese la Tarifa Base");
+                    System.out.println(" ▒ Ingrese la Tarifa Base");
                         pagoLuzElectrica1.setTarifaBase(entrada.nextDouble());
-                    System.out.println("Ingrese los Kilovatios Consumidos");
+                    System.out.println(" ▒ Ingrese los Kilovatios Consumidos");
                         pagoLuzElectrica1.setKilovatiosConsumidos(entrada.nextDouble());
-                    System.out.println("Ingrese el Costo de los Kilovatios");
+                    System.out.println(" ▒ Ingrese el Costo de los Kilovatios");
                         pagoLuzElectrica1.setCostoKilovatio(entrada.nextDouble());
                         pagoLuzElectrica1.setCiudad(ciudad);
                     pagoLuzElectrica1.calcularPago();
@@ -104,12 +107,12 @@ public class Principal {
                 case 3 -> {
                     PagoPredial pagoPredial1 = new PagoPredial();
                     System.out.println("\n=================== PAGO PREDIAL ===================");
-                    System.out.println("Ingrese el mes: ");
+                    System.out.println(" ▒ Ingrese el mes: ");
                     pagoPredial1.setMes(entrada.nextLine());
-                    System.out.println("Ingrese el costo de la Propiedad");
+                    System.out.println(" ▒ Ingrese el costo de la Propiedad");
                     Propiedad propiedad1 = new Propiedad(entrada.nextDouble());
                     pagoPredial1.setPropiedad(propiedad1);
-                    System.out.println("Ingrese el Porcentaje de pago de la Propiedad");
+                    System.out.println(" ▒ Ingrese el Porcentaje de pago de la Propiedad");
                     pagoPredial1.setPorcentaje(entrada.nextDouble());
                     pagoPredial1.calcularPago();
                     listaPagos.add(pagoPredial1);
@@ -118,11 +121,11 @@ public class Principal {
                 case 4 -> {
                     PagoTelefonoConvencional telefonoConvencional = new PagoTelefonoConvencional();
                     System.out.println("\n=================== TELEFONO CONVENCIONAL ===================");
-                    System.out.println("Tarifa: ");
+                    System.out.println(" ▒ Tarifa: ");
                     telefonoConvencional.setTarifa(entrada.nextDouble());
-                    System.out.println("Minutos Consumidos: ");
+                    System.out.println(" ▒ Minutos Consumidos: ");
                     telefonoConvencional.setMinutosConsumidos(entrada.nextDouble());
-                    System.out.println("Costo Minuto: ");
+                    System.out.println(" ▒ Costo Minuto: ");
                     telefonoConvencional.setCostoMinuto(entrada.nextDouble());
                     telefonoConvencional.calcularPago();
                     listaPagos.add(telefonoConvencional);
@@ -138,7 +141,7 @@ public class Principal {
                 }
                 case 6 -> {
                     bandera = false;
-                    System.out.println("*------- Saliendo de la Billetera -------*");
+                    System.out.println("SALIendo de billete...ra....");
                     entrada.close();
                 }
                 default -> {

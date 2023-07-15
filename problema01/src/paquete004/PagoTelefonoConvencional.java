@@ -55,4 +55,13 @@ public class PagoTelefonoConvencional extends Pagos {
     public void calcularPago(){
         super.setPago(this.tarifa + (this.minutosConsumidos * this.costoMinuto));
     }
+
+    @Override
+    public String toString() {
+        return "\nPagoTelefonoConvencional{" +
+                "\ntarifa=" + tarifa +
+                "\nminutosConsumidos=" + minutosConsumidos +
+                "\ncostoMinuto=" + costoMinuto +
+                "} \n" + super.toString();
+    }
 }

@@ -28,6 +28,6 @@ public class Ciudad {
     public String toString() {
         return "Ciudad" +
                 "\nnombreCiudad='" + nombreCiudad + '\'' +
-                '}';
+                "}\n";
     }
 }

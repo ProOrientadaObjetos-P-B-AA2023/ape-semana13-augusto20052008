@@ -69,10 +69,10 @@ public class PagoLuzElectrica extends Pagos{
     @Override
     public String toString() {
         return "PagoLuzElectrica{" +
-                "tarifaBase=" + tarifaBase +
-                ", kilovatiosConsumidos=" + kilovatiosConsumidos +
-                ", costoKilovatio=" + costoKilovatio +
-                ", ciudad='" + ciudad + '\'' +
-                "} " + super.toString();
+                "\ntarifaBase=" + tarifaBase +
+                "\nkilovatiosConsumidos=" + kilovatiosConsumidos +
+                "\ncostoKilovatio=" + costoKilovatio +
+                "\nciudad='" + ciudad + '\'' +
+                "} \n" + super.toString();
     }
 }

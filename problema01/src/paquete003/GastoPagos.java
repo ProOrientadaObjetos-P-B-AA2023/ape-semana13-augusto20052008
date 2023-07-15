@@ -36,8 +36,8 @@ public class GastoPagos {
 
     @Override
     public String toString() {
-        return "GastoPagos{"+
+        return "\nGastoPagos{"+
                 ", total=" + total +
-                '}';
+                "}\n";
     }
 }
